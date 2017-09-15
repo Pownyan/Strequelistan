@@ -50,12 +50,6 @@ Place your tests next to the code they're testing. Run all tests with:
 ```sh
 python3 ./manage.py test --pattern="*_test.py"
 ```
-
-## Cyclic dependency fix
-You will get a error complaining about a cyclic dependency when runnig the first migration. To fix this, comment out the
-reference to "strecklista.Group" in the EmailUser.models.MyUser class, run the migration, remove the comment and migrate
-again
-
 ## Email
 As this project uses gmail for outgoing mail you need to enable "less secure devices" on the google account as [described here](http://stackoverflow.com/questions/26697565/django-smtpauthenticationerror). This should only be needed the first time the website is set up on a new server.
 
